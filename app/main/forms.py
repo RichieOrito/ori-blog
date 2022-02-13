@@ -12,7 +12,7 @@ class BlogForm(FlaskForm):
 
 class CommentForm(FlaskForm):
     """
-    Class to create a wtf form for creating a pitch
+    Class to create a wtf form for creating a comment
     """
     comment = TextAreaField('Comment')
     submit = SubmitField('Submit')
