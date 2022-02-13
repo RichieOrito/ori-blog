@@ -6,7 +6,7 @@ class Config:
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST ='app/static/photos'
-
+    
     #  email configurations
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
@@ -23,3 +23,26 @@ class Config:
     @staticmethod
     def init_app(app):
         pass
+
+class ProdConfig(Config):
+   
+    pass
+
+class DevConfig(Config):
+
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:xoxo@localhost/blog'
+    
+    DEBUG = True
+
+
+class TestConfig(Config):
+    
+    pass    
+
+
+config_options = {
+'development':DevConfig,
+'production':ProdConfig,
+'test':TestConfig
+
+}
