@@ -78,3 +78,14 @@ def view(id):
         new_comment.save_comment()
     return render_template('view.html', blog=blog, blog_comments=blog_comments, comment_form=comment_form)
 
+@main.route('/delete/<int:id>', methods=['GET', 'POST'])
+@login_required
+def delete(id):
+    blog = Blog.query.get_or_404(id)
+    if blog.user != current_user:
+        abort(403)
+    db.session.delete(blog)
+    db.session.commit()
+ 
+    return redirect(url_for('main.theblog'))
+
