@@ -67,3 +67,14 @@ def update_blog(id):
         form.description.data = blog.description
     return render_template('update_blog.html', form=form)
 
+@main.route('/view/<int:id>', methods=['GET', 'POST'])
+@login_required
+def view(id):
+    blog = Blog.query.get_or_404(id)
+    blog_comments = Comment.query.filter_by(blog_id=id).all()
+    comment_form = CommentForm()
+    if comment_form.validate_on_submit():
+        new_comment = Comment(blog_id=id, comment=comment_form.comment.data, user=current_user)
+        new_comment.save_comment()
+    return render_template('view.html', blog=blog, blog_comments=blog_comments, comment_form=comment_form)
+
