@@ -15,6 +15,12 @@ class RegistrationForm(FlaskForm):
     password_confirm = PasswordField('confirm password', validators=[Required()])
     submit = SubmitField('sign Up')
 
+    def validate_email(self, data_field):
+        """
+        Functions takes in the data field and checks our database to confirm user Validation
+        """
+        if User.query.filter_by(email = data_field.data).first():
+            raise ValidationError('There is an account with that email')
 
 
 
