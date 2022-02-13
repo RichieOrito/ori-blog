@@ -8,3 +8,8 @@ from flask_uploads import UploadSet,configure_uploads,IMAGES
 from flask_mail import Mail
 from flask_simplemde import SimpleMDE
 
+bootstrap = Bootstrap()
+material = Material()
+db = SQLAlchemy()
+photos = UploadSet('photos',IMAGES)
+mail = Mail()
