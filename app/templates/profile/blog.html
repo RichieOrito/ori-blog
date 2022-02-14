@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+
+{%import 'macros.html' as macro%}
+
+{% block content %}
+
+<div class="container">
+    <div class="row container">
+        <!-- Username -->
+        <h2><strong>{{user.username| capitalize}}</strong></h2>
+        <hr>
+        <!-- profile photo -->
+        <div class="col-md-3">
+            <div class="thumbnail">
+                {%if user.profile_pic_path %}
+                <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="profile-pic" class="mg-circle">
+                {%else%}
+                <p>no dp</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <p><b>Name:</b> {{user.username}}</p>
+                <p> <b>Date joined:</b> {{date}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

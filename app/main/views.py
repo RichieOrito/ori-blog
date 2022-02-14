@@ -13,7 +13,7 @@ def index():
     View root page function that returns the index page and its data
     '''
     blogQuote = get_blogQuotes()
-    title = 'Home -welcome to My Blogs'
+    title = 'Home -welcome to OriBlogs'
     
     return render_template('index.html',title = title, blogQuote=blogQuote)
 
