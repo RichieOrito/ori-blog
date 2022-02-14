@@ -2,6 +2,10 @@ from wtforms.validators import Required
 from wtforms import StringField, TextAreaField, SubmitField, SelectField
 from flask_wtf import FlaskForm
 
+class UpdateProfile(FlaskForm):
+    bio = TextAreaField('Bio.',validators = [Required()])
+    submit = SubmitField('Submit')
+
 class BlogForm(FlaskForm):
     """
     Class to create a wtf form for creating a blog
