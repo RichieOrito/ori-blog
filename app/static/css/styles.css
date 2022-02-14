@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Acme', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: #19282F;
+}
+
+
+h2.welcome{
+    text-align: center;
+    font-weight: 900;
+    color: #fff;
+}
+
+p.quote{
+    color: #A1B57D;
+    font-size: 20px;
+}
+
+p.author{
+    color: #B33030;
+}
+
+.panel{
+    background-color: #A1B57D;
+    color: #fff;
+    font-family: 'Acme', sans-serif;
+    width: 300px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    
+}
+
+.panel-head{
+    color: #19282F;
+    font-weight: 750;
+}
+
+.text-muted{
+    color: #B33030;
+}
+
+.panel-footer{
+    background-color: #19282F;
+}
+
+.bi{
+    color: #fff;
+}
+
+.comment{
+    color: #A1B57D;
+}
+
+.comment-blog{
+    color: grey;
+}
+
+.comment-date{
+    color: #B33030;
+}
+
+.comment-uname{
+    color: #fff;
+}
