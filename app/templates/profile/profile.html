@@ -20,24 +20,24 @@
                 <form action="{{url_for('main.update_pic',uname=user.username)}}" method="post"
                     enctype="multipart/form-data">
                     <input type="file" name="photo" class="form-control" required><br>
-                    <input type="submit">
+                    <input class="submit" type="submit">
                 </form>
                 {% endif %}
             </div>
         </div>
         <div class="col-md-4">
-            <p> <b>Name:</b> {{user.username}}</p>
-            <p><b> Date joined: </b>{{date}}</p>
+            <p class="bio-uname"> <b><span class= "name-bio">Name:</span> </b> {{user.username}}</p>
+            <p class="bio-date"><b> Date joined: </b>{{date}}</p>
         </div>
 
         <div class="col-md-4">
-            <h3><b>Add Your Bio</b></h3>
+            <h3 class="bio"><b>Add Your Bio</b></h3>
 
             <!--Displaying user bio-->
             {% if user.bio %}
-            <p> {{user.bio}}</p>
+            <p class="bio-bio"> {{user.bio}}</p>
             {%else%}
-            <p> {{user.username| capitalize}} has no bio </p>
+            <p class="no-bio"> {{user.username| capitalize}} has no bio </p>
             {% endif %}
 
             {% if user == current_user %}

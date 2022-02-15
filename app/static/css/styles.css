@@ -114,3 +114,48 @@ flash{
     color: #fff;
 }
 
+h1.text-center{
+    color: #fff;
+}
+
+.fa-user{
+    color: grey;
+}
+
+.submit{
+    background-color: grey;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.submit:hover{
+    color: #fff;
+    background-color: #B33030;
+}
+
+.bio-uname{
+    color: #fff;
+}
+
+.bio-date{
+    color: #B33030;
+}
+
+.name-bio{
+    color: #B33030;
+}
+
+.bio{
+    color: #B33030;
+}
+
+.no-bio{
+    color: grey;
+}
+
+.bio-bio{
+    color: #fff;
+}
+
