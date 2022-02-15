@@ -40,12 +40,15 @@ p.author{
     align-items: center;
     justify-content: center;
     margin-top: 5px;
+    font-weight: 650;
+    font-size: 15px;
     
 }
 
 .panel-head{
     color: #19282F;
     font-weight: 750;
+    text-decoration: underline;
 }
 
 .text-muted{
@@ -75,3 +78,31 @@ p.author{
 .comment-uname{
     color: #fff;
 }
+
+.blogging{
+    color: #fff;
+}
+
+.panel-default{
+    background-color: #fff;
+    color: #000;
+
+}
+
+.daccount{
+    color:#fff;
+}
+
+.login{
+    color: #fff;
+}
+
+.navbar{
+    background-color: #fff;
+}
+
+.navbar-default{
+    background-image: url(
+    "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 0, 0, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+
