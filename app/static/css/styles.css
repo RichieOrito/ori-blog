@@ -42,7 +42,15 @@ p.author{
     margin-top: 5px;
     font-weight: 650;
     font-size: 15px;
-    
+}
+
+.box{
+  margin-top: 3rem;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 2px #fff;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .panel-head{

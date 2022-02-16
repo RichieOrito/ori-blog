@@ -6,6 +6,7 @@
     <div class="row">
         {%for blog in blogs%}
         <div class="col-md-4">
+            <div class="box">
             <div class="panel text-center">
                 <div class="panel-head text-info">
                     <h3>{{blog.title_blog}}</h3>
@@ -22,6 +23,7 @@
                     <a href="{{url_for('main.delete', id=blog.id)}}"><i class="bi bi-trash-fill"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="{{url_for('main.update_blog', id=blog.id)}}"><i class="bi bi-pen"></i></a>
                     {% endif %}
+                </div>
                 </div>
             </div>
         </div>
