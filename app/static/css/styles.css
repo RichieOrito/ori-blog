@@ -31,13 +31,17 @@ p.author{
     color: #B33030;
 }
 
+.fix{
+    width: 100%;
+    height: 100%;
+}
+
 .panel{
     background-color: #A1B57D;
     color: #fff;
     font-family: 'Acme', sans-serif;
     width: 300px;
     display: grid;
-    align-items: center;
     justify-content: center;
     margin-top: 5px;
     font-weight: 650;
