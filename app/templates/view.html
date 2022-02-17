@@ -31,8 +31,9 @@
             <p class="comment-uname">{{comment.user.username}}</p>
             <p>{{comment.comment}}</p>
             <p class="comment-date">{{comment.date.strftime("%Y-%m-%d")}}</p>
-
+            {% if comment.user == current_user%}
             <a href="{{url_for('main.delete_comment', comment_id=comment.id)}}"><i class="bi bi-trash-fill"></i></a>
+            {% endif %}
             {%endfor%}
         </div>
     </div>
