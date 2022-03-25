@@ -25,7 +25,7 @@ class Config:
         pass
 
 class ProdConfig(Config):
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL').replace("://", "ql://", 1)
     # 'postgresql://prhnglsmvrvukm:6820977895dbde15004b67071c0ae01b886e68534b4bf13cfdb28be74dd29223@ec2-3-225-79-57.compute-1.amazonaws.com:5432/d56qbrd1scp8o8'
    
     pass
